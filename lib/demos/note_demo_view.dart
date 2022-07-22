@@ -35,7 +35,15 @@ class NoteDemos extends StatelessWidget {
             height: 100,
           ),
           _createButton(context),
-          TextButton(onPressed: () {}, child: Text(_importNotes)),
+          Padding(
+            padding: const EdgeInsets.only(left: 90),
+            child: Row(
+              children: [
+                Text('Henüz üye değil misiniz?'),
+                TextButton(onPressed: () {}, child: Text(_importNotes)),
+              ],
+            ),
+          ),
           const SizedBox(height: ButtonHeights.buttonNormalHeight),
         ]),
       ),
