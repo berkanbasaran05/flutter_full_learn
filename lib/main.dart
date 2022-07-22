@@ -7,10 +7,12 @@ import 'package:flutter_full_learn/101/color_learn.dart';
 import 'package:flutter_full_learn/101/deneme.dart';
 import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/image_learn_view.dart';
+import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/demos/maike_demo.dart';
 import 'package:flutter_full_learn/demos/note_demo_view.dart';
+import 'package:flutter_full_learn/demos/phantom_demo.dart';
 import '101/text_learn_view.dart';
 
 void main() {
@@ -28,16 +30,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
         errorColor: ColorsItems.sulu,
         backgroundColor: Colors.purple,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.deepPurple,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           systemOverlayStyle: SystemUiOverlayStyle.light,
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Colors.deepPurple,
           elevation: 0,
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: NoteDemos(),
+      home: MaikeNoteDemos(),
     );
   }
 }
