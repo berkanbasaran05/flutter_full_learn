@@ -29,17 +29,17 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
         errorColor: ColorsItems.sulu,
-        backgroundColor: Colors.purple,
-        scaffoldBackgroundColor: Colors.deepPurple,
+        //backgroundColor: Color(0xff3f2527),
+        scaffoldBackgroundColor: Colors.transparent,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           systemOverlayStyle: SystemUiOverlayStyle.light,
-          backgroundColor: Colors.deepPurple,
+          //backgroundColor: Colors.transparent,
           elevation: 0,
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: MaikeNoteDemos(),
+      home: Phantom(),
     );
   }
 }

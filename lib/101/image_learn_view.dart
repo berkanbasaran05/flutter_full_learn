@@ -36,6 +36,7 @@ class ImageItems {
   final String applebooktran = "applebooktransp";
   final String apartman = "apartment";
   final String sektorel = "sektorel";
+  final String Solana = "solana";
 }
 
 class PngImage extends StatelessWidget {
