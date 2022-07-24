@@ -7,43 +7,32 @@ class Phantom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+        appBar: AppBar(
+          title: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TitleWidget(title: Textler()._title),
+                Text(Textler().wallet)
+              ],
+            ),
+          ),
+          leading: AppBarWalletButton(),
+          centerTitle: true,
+          actions: [AppBarButton()],
+          flexibleSpace: AppBarGradientContainer(),
+        ),
+        body: Container(
+          decoration: DecorationItems.decorations,
+          child: Column(
             children: [
-              TitleWidget(title: Textler()._title),
-              Text(Textler().wallet)
+              ValueWidget(),
+              ButtonWidget(),
+              ValueListWidget(),
             ],
           ),
         ),
-        leading: AppBarWalletButton(),
-        centerTitle: true,
-        actions: [AppBarButton()],
-        flexibleSpace: AppBarGradientContainer(),
-      ),
-      body: Container(
-        decoration: DecorationItems.decorations,
-        child: Column(
-          children: [
-            ValueWidget(),
-            ButtonWidget(),
-            ValueListWidget(),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.money),
-            label: '',
-            backgroundColor: Color(0xff1f1f1e)),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.swap_vert_outlined), label: 'sill'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.flash_on_outlined), label: 'Yüklee'),
-        BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Sil'),
-      ], backgroundColor: Color(0xff1f1f1e)),
-    );
+        bottomNavigationBar: BottomNavigation.bottomNavigationBars);
   }
 }
 
@@ -311,4 +300,16 @@ class DecorationItems {
         end: Alignment.bottomLeft,
         colors: [Color(0xff3f2527), Color(0xff1f1f1e)]),
   );
+}
+
+class BottomNavigation {
+  static BottomNavigationBar bottomNavigationBars = BottomNavigationBar(items: [
+    BottomNavigationBarItem(
+        icon: Icon(Icons.money), label: '', backgroundColor: Color(0xff1f1f1e)),
+    BottomNavigationBarItem(
+        icon: Icon(Icons.swap_vert_outlined), label: 'sill'),
+    BottomNavigationBarItem(
+        icon: Icon(Icons.flash_on_outlined), label: 'Yüklee'),
+    BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Sil'),
+  ], backgroundColor: Color(0xff1f1f1e));
 }
