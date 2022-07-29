@@ -10,7 +10,11 @@ import 'package:flutter_full_learn/101/image_learn_view.dart';
 import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
+import 'package:flutter_full_learn/demos/color_demos_view.dart';
+import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
 import 'package:flutter_full_learn/demos/maike_demo.dart';
+import 'package:flutter_full_learn/demos/nft_marketplace_demos.dart';
+import 'package:flutter_full_learn/demos/nft_marketplace_demos2.dart';
 import 'package:flutter_full_learn/demos/note_demo_view.dart';
 import 'package:flutter_full_learn/demos/phantom_demo.dart';
 import '101/text_learn_view.dart';
@@ -28,18 +32,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
-        errorColor: ColorsItems.sulu,
-        //backgroundColor: Color(0xff3f2527),
-        scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-          systemOverlayStyle: SystemUiOverlayStyle.light,
-          //backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
-      ),
+          errorColor: ColorsItems.sulu,
+          //backgroundColor: Color(0xff3f2527),
+          scaffoldBackgroundColor: Colors.white,
+          appBarTheme: const AppBarTheme(
+            centerTitle: true,
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            //backgroundColor: Colors.transparent,
+            elevation: 0,
+          ),
+          textButtonTheme: TextButtonThemeData(
+              style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.black)))),
       debugShowCheckedModeBanner: false,
-      home: Phantom(),
+      home: NftMarketplace(),
     );
   }
 }
