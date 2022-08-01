@@ -235,3 +235,12 @@ class StackCardListTile1 extends StatelessWidget {
         trailing: Text('1.10 ETH', style: TextStyles.titlestlye));
   }
 }
+
+class wsw extends StatelessWidget {
+  const wsw({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
