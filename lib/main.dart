@@ -10,6 +10,7 @@ import 'package:flutter_full_learn/101/image_learn_view.dart';
 import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
+import 'package:flutter_full_learn/202/service/service_learn_view.dart';
 import 'package:flutter_full_learn/demos/color_demos_view.dart';
 import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
 import 'package:flutter_full_learn/demos/maike_demo.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           //backgroundColor: Color(0xff3f2527),
           scaffoldBackgroundColor: Colors.white,
           appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.transparent,
             centerTitle: true,
             systemOverlayStyle: SystemUiOverlayStyle.light,
             //backgroundColor: Colors.transparent,
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
                   foregroundColor:
                       MaterialStateProperty.all<Color>(Colors.black)))),
       debugShowCheckedModeBanner: false,
-      home: NftMarketplace(),
+      home: ServiceLearn(),
     );
   }
 }
